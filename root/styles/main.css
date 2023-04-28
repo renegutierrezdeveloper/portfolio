@@ -1,0 +1,436 @@
+/**********************************************************
+            TABLE OF CONTENTS
+----------------------------------------------------------
+    0. Project details and color and typography info
+    1. CSS Reset
+    2. Global styles
+        -root
+    3. Header and nav
+        -global
+        -sub pages
+    4. Main body content
+        -global
+        -sub pages
+    5. Footer content
+        -global
+        -sub pages
+    6. Forms
+        -sub pages
+    7. Media queries
+        -global
+        -sub pages
+************************************************************/
+
+/***********************************************************
+    0. Project details and color and typography info
+--------------------------------------------
+    Author: Group1
+    Project: Rene Gutierrez website
+    Ver: 1.0
+    Last Updated: 5/14/2023
+    Color and typography info: pages/styleGuide/styleGuide.html  ????????????????
+*************************************************************/
+
+/***********************************************************
+    1. CSS Reset
+--------------------------------------------
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+************************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/***********************************************************
+    2. Global styles
+************************************************************/
+:root {
+/* typography */
+    --primary-font: 'Roboto', sans-serif;
+    --fw-thin: 100;
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+    --fw-black: 900;
+    
+/* colors */    
+    --bg-color: #fff;
+    --dark-blue: #162a50;
+    --hover-color: #fff;
+    --light-color: #76b2fc;
+    --primary-color: #034ba3;
+    --secondary-color: #fff;
+    --text-color: #fff;
+
+/* helper ??????????????   
+    --spacer: 1rem;
+    --border-radius: 6px;
+    --shadow: 0 0 6px rgba(0,0,0,0.3);  */
+}
+
+html { font-size: 10px; }
+body {
+    font-family: var(--primary-font);
+    line-height: 1.5;
+    /*max-width: 2000px;*/
+    margin: auto;
+}
+h1 {
+    color: var(--bg-color);
+    font-size: 4.8rem;
+    line-height: 1;
+}
+h2 {
+    font-size: 2.8rem;
+    line-height: 1.1;
+}
+h3 {
+    font-size: 2.2rem;
+    line-height: 1.5;
+}
+p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+a {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-decoration: none;
+}
+/*a:hover { color: #6DCFCA; }*/
+img {
+    
+    height: auto;
+    margin: auto;
+    max-width: 100%;
+
+
+    display: inline-block;
+    vertical-align: middle;
+    border: 0;
+}
+/*a.button {
+    background-color: #00736D;
+    border-radius: 100vh;
+    color: white;
+    font-size: 1.5rem;
+    height: 57px;
+    padding: 2rem 2.5rem;
+    text-decoration: none;
+}*/
+/*a.button:hover {
+    background-color: #6DCFCA;
+    border: 1px solid #00736D;
+    color: #000;
+}*/
+strong { font-weight: bold; }
+/***********************************************************
+    3. Header and nav
+************************************************************/
+.hero {
+    height: 420px;
+    width: 100%;
+    background-image: linear-gradient(90deg, rgba(20, 45, 83, 0.6), rgba(20, 45, 83, 0.6)), url(../images/home-header-bg.jpg);
+    background-position: center 60%;;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section.heroText {
+    height: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0px 60px;
+}
+p.subHeading {
+    color: #afe4fd;
+    font-size: 2rem;
+    font-weight: normal;
+}
+a.button.heroBtn {
+    margin-top: 20px;
+}
+/* logo */
+.logo {
+    color: var(--bg-color);
+    cursor: pointer;
+    font-size: 1.6rem;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    border: 0;
+    padding: 10px;
+    text-align: center;
+}
+/* navigation */
+nav.mainNav {
+    background-color: var(--primary-color);
+    text-transform: uppercase;
+}
+nav ul {
+    display: none;
+}
+.container-fluid {
+    margin: 0 auto;
+    border: solid 0px turquoise;
+    width: 100%;
+    max-width: 320px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+/***********************************************************
+    4. Main body content
+************************************************************/
+a.button {
+   
+    background: linear-gradient(#034ba3, #142d53);
+    border-color: #142d53;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    color: var(--bg-color);
+    cursor: pointer;
+    display: inline-block;
+    font-weight: var(--fw-medium);   
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-shadow: 3px 1px 1px #142d53;
+}
+
+p.link-button {
+    padding: 1.5rem 0;
+}
+/*section.feature.grid-row {
+    grid-template-columns: 1fr;
+}*/
+section.feature, footer.footer-bg {
+    padding-top: 0.938rem;
+    padding-bottom: 0.938rem;
+}
+.col-homepage-intro {
+    margin-top: 20px;
+}
+.col-feature-img {
+    margin-bottom: 10px;
+}
+section.feature h2.title {
+    color: var(--primary-color);
+}
+section.subFeature {
+    padding: 2rem 0 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    background-image: linear-gradient(90deg, rgba(20, 45, 83, 0.4), rgba(20, 45, 83, 0.4)), url(https://www.renegutierrezdesign.com/wp-content/uploads/2019/04/about-bottom-bg001.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    /*max-height: 100%;*/
+}
+section.subFeature h3 {
+    color: var(--bg-color);
+    font-weight: normal;
+    margin-bottom: 0.8rem !important;
+    text-align: center;
+    text-shadow: 1px 1px #444;
+}
+section.subFeature p {
+    color: var(--bg-color);
+    text-align: center;
+    text-shadow: 1px 1px #444;
+}
+article.subFeature-process .subFeature-icon {
+    color: var(--bg-color);
+    display: block;
+    font-size: 5rem;
+    text-align: center;
+}
+article.subFeature-process {
+    display: grid;
+    gap: 3rem;
+    grid-template-areas: "step1"
+                         "step2"
+                         "step3";
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(auto, 3);
+    margin: 30px 0 20px;
+}
+article.subFeature-process section:nth-of-type(1) {
+    grid-area: step1;
+}
+article.subFeature-process section:nth-of-type(2) {
+    grid-area: step2;
+}
+article.subFeature-process section:nth-of-type(3) {
+    grid-area: step3;
+}
+
+/***********************************************************
+    5. Footer content
+************************************************************/
+footer.footer-bg {
+    background: var(--dark-blue);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    color: var(--bg-color);
+}
+p.copyright {
+    font-size: 1.5rem;
+    text-align: center;
+}
+/***********************************************************
+    7. Media queries
+************************************************************/
+/* Small devices (landscape phones, 576px and up)?????????????*/
+@media screen and (min-width: 576px) {
+	.container-fluid {
+        width: 100%;
+        margin: 0 auto;
+        border: solid 0px red;
+        max-width: 480px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media screen and (min-width: 768px) {
+    /* global */
+    h2 {
+        line-height: 1.1;
+    }
+    /* navigation */
+    nav.mainNav {
+        background-color: var(--primary-color);
+        text-transform: uppercase;
+    }
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: block;
+    }
+    nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 0.8rem 0.938rem;
+        cursor: pointer;
+    }
+    nav ul li a {
+        color: var(--bg-color);
+        font-size: 1.5rem;
+        font-weight: var(--fw-bold);  
+    }
+    nav ul li a:hover {
+        color: var(--light-color);
+    }
+    .container-fluid.navBar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    /* container */
+    .container-fluid {
+        width: 100%;
+        margin: 0 auto;
+        border: solid 0px orange;
+        padding: 0.5rem 2rem;
+        max-width: 660px;
+    }
+    .col-homepage-intro {
+        margin-top: 10px;
+    }
+    /* homepage mainFeature section */
+    section.feature.grid-row {
+        display: grid; 
+        grid-template-columns: 1.6fr 1fr; 
+        gap: 2rem;
+    }
+    .col-feature-img {
+        display: flex;
+    }
+    /* homepage subFeature section */
+    article.subFeature-process {
+        display: grid;
+        gap: 4rem;
+        grid-template-areas: "step1 step2 step3";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        margin: 20px 0;
+    }
+    article.subFeature-process section:nth-of-type(1) {
+        grid-area: step1;
+    }
+    article.subFeature-process section:nth-of-type(2) {
+        grid-area: step2;
+    }
+    article.subFeature-process section:nth-of-type(3) {
+        grid-area: step3;
+    }	
+}
+/* Large devices (desktops, 960px and up)*/
+@media screen and (min-width: 960px) { 
+    h2 {
+        line-height: 1.5;
+    }
+    .container-fluid {
+        border: solid 0px pink;
+        max-width: 860px;
+    }
+    article.subFeature-process {
+        gap: 8rem;
+    }
+}
+/* XL devices (large desktops, 1100px and up)*/
+@media screen and (min-width: 1100px) {
+    .container-fluid {
+        border: solid 0px purple;
+        max-width: 992px;
+    }
+    
+}
+/* XXL devices (large desktops, 1400px and up)*/
+@media screen and (min-width: 1200px) {
+    .container-fluid {
+        border: solid 0px yellow;
+        max-width: 1100px;
+    }
+    section.feature.grid-row {
+        grid-template-columns: 2fr 1fr; 
+    }
+}
